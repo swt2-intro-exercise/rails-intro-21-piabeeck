@@ -6,6 +6,15 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  #### neu für #02 to access the path (i.e. the URL) of the "new author" page
+  #1. Idee: resources :author, path: '/admin/author' 
+  #2. Idee:
+  #  get 'welcome/index'
+  #  resources :author
+  #  root 'welcome#index'
+  #3. Idee:
+  resources :author
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   
