@@ -8,7 +8,7 @@ class AuthorController < ApplicationController
       @author = Author.find(params[:id])
     end
 
-    def index # bisschen unsicher (03) - damit kann man alle Autoren adressieren?!
+    def index # 03 - damit kann man alle Autoren adressieren?!
       @authors = Author.all
     end
 
@@ -21,14 +21,14 @@ class AuthorController < ApplicationController
       end
     end
 
-    def create_table # höchst unsicher (03)
+    def create_table # braucht man nicht (03)
       # @author = Author.new(params[:author])
       @author = Author.new(author_params)
       @author.save
       redirect_to @author
     end
 
-    private # nicht ganz so unsicher (03)
+    private # 03
     def author_params
       params.require(:author).permit(:first_name, :last_name, :homepage)
     end
