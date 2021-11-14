@@ -1,5 +1,7 @@
 <h1>New Author</h1>
-<%= form_with scope: :author, local: true do |form| %>
+
+<%= form_with scope: :author, url: new_author_path, local: true do |form| %>
+
     <p>
         <%= form.label 'author[first_name]' %><br>
         <%= form.text_field :first_name %>
@@ -18,4 +20,7 @@
     <p>
       <%= form.submit %>
     </p>
+
   <% end %>
+
+  

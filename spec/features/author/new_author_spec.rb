@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'rails_helper' # erstmal hier deaktiviert
 
 describe "New author page", :type => :feature do #type: ?
 
