@@ -21,13 +21,6 @@ class AuthorController < ApplicationController
       end
     end
 
-    def create_table # braucht man nicht(03)
-      # @author = Author.new(params[:author])
-      @author = Author.new(author_params)
-      @author.save
-      redirect_to @author
-    end
-
     private # 03
     def author_params
       params.require(:author).permit(:first_name, :last_name, :homepage)
