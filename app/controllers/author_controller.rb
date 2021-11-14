@@ -21,7 +21,7 @@ class AuthorController < ApplicationController
       end
     end
 
-    def create_table # braucht man nicht (03)
+    def create_table # braucht man nicht(03)
       # @author = Author.new(params[:author])
       @author = Author.new(author_params)
       @author.save
