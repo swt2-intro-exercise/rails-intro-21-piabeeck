@@ -4,7 +4,7 @@ class AuthorsController < ApplicationController
         @author = Author.new # 03: war davor noch nicht da - jetzt neue Instanz erstellen?!
       end
   
-      def show # 03: ich glaub, das brauch ich nicht
+      def show # 03: ich glaub, das brauch ich nicht - in #07 aber schon?!
         @author = Author.find(params[:id])
       end
   
