@@ -17,7 +17,7 @@ class AuthorsController < ApplicationController
         if @author.save
             redirect_to root_path, notice: 'Success!'
         else 
-          render :new
+          render 'new'# vor der #09 war es ":new"
         end
       end
   
