@@ -8,18 +8,18 @@ author_Alan = Author.new(
 
 describe "Author page", :type => :feature do #type: ?
 
-    it "Author page should display all authors" do
-        visit authors_path
-        expect(page).to have_text("Alan")
-        expect(page).to have_text("Turing")
-        
-    end
+    #it "Author page should display all authors" do
+    #    visit authors_path
+    #    expect(page).to have_text("Alan")
+    #    expect(page).to have_text("Turing")
+    #    
+    #end
 
-    it "Author page should display author details #7" do
-        # Tipp im Issue: FactoryBot.create :author
-        visit author_path(@Alan)
-        expect(page).to have_text("Alan")
-        expect(page).to have_text("Turing")
-        expect(page).to have_text("http://wikipedia.org/Alan_Turing")
-    end
+    #it "Author page should display author details #7" do
+    #    # Tipp im Issue: FactoryBot.create :author
+    #    visit author_path(@Alan)
+    #    expect(page).to have_text("Alan")
+    #    expect(page).to have_text("Turing")
+    #    expect(page).to have_text("http://wikipedia.org/Alan_Turing")
+    #end
 end
