@@ -3,7 +3,7 @@ class Author < ApplicationRecord
     validates :last_name, presence: true
     validates :homepage, presence: true #03: validation declares that a first_name value must be present
 
-    has_and_belongs_to_many :paper
+    has_and_belongs_to_many :papers
 
     def name # 03
         full_name = self.first_name + " " + self.last_name
