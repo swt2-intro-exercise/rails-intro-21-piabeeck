@@ -6,6 +6,13 @@
 </p>
 
 <p>
+  <strong>Authors:</strong>
+  <% @paper.authors.each do |author| %>
+    <%= author.name %> <br>
+    <% end %>
+</p>
+
+<p>
   <strong>Venue:</strong>
   <%= @paper.venue %>
 </p>
