@@ -3,6 +3,10 @@ class AuthorsController < ApplicationController
     def new
         @author = Author.new # 03: war davor noch nicht da - jetzt neue Instanz erstellen?!
       end
+
+      def edit
+        @author = Author.find(params[:id])
+      end
   
       def show # 03: ich glaub, das brauch ich nicht - in #07 aber schon?!
         @author = Author.find(params[:id])
@@ -17,7 +21,17 @@ class AuthorsController < ApplicationController
         if @author.save
             redirect_to root_path, notice: 'Success!'
         else 
-          render 'new'# vor der #09 war es ":new"
+          render 'edit' # vor der #09 war es ":new" und vor der #10 ein 'new'
+        end
+      end
+
+      def update
+        @author = Author.find(params[:id])
+       
+        if @author.update(author_params)
+          redirect_to @author
+        else
+          render 'edit'
         end
       end
   
