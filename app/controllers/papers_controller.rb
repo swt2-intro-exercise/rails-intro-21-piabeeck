@@ -3,7 +3,7 @@ class PapersController < ApplicationController
 
   # GET /papers
   def index
-    @papers = Paper.all
+    @papers = Paper.created_at(params[:year]) #vorher: Paper.all
   end
 
   # GET /papers/1
