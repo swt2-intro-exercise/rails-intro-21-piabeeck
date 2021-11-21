@@ -7,5 +7,4 @@ class Paper < ApplicationRecord
 
     scope :created_at, ->(year) { 
         where("year = ?", year) if year.present? }
-
 end
