@@ -1,0 +1,30 @@
+require 'rails_helper'
+
+author_Alan = Author.new(
+            first_name:"Alan",
+            last_name:"Turing",
+            homepage:"http://wikipedia.org/Alan_Turing")
+            
+
+describe "Author page", :type => :feature do #type: ? 
+
+    #it "Author page should display all authors" do
+    #    visit authors_path
+    #    expect(page).to have_text("Alan")
+    #    expect(page).to have_text("Turing")
+    #    
+    #end
+
+    #it "Author page should display author details #7" do
+    #    # Tipp im Issue: FactoryBot.create :author
+    #    visit author_path(@Alan)
+    #    expect(page).to have_text("Alan")
+    #    expect(page).to have_text("Turing")
+    #    expect(page).to have_text("http://wikipedia.org/Alan_Turing")
+    #end
+
+    it "Author index page should link to the new author page #8" do
+        visit authors_path
+        expect(page).to have_link 'New', href: new_author_path
+    end
+end
